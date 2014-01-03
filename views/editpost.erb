@@ -1,0 +1,6 @@
+<form action="/posts/<%=@post.id%>/editpost" method="post">
+  <input type="text" name="title" value="<%=@post.title%>">
+  <textarea name="body" cols="70" rows="10" value="<%=@post.body%>"></textarea>
+  <input type="submit">
+</form>
+<hr>

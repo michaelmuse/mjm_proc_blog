@@ -1,6 +1,27 @@
 
 <h1 class="user"><%= @user.username %></h1>
+<h2>Posts <%=@user.username%> wrote:</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Created at</th>  
+      <th>Edit Post</th>  
+      <th>Delete Post</th>  
+    </tr>
+  </thead>
+  <tbody>
+    <% @userposts.each do |post|%>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.created_at %></td>  
+      <td><a href="/posts/<%=post.id%>/editpost"><button>edit</button></a></td>  
+      <td><a href="/posts/<%=post.id%>/deletepost"><button>delete</button></a></td>  
+    </tr>
+  </tbody>
+</table>
 
+<h2>Posts <%=@user.username%> liked:</h2>
 <ul>
 	<% @user.faves.each do |post| %>
 		<li><%=post.title %></li>

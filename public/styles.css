@@ -5,10 +5,10 @@
 
 .post {
 	background-color: lightblue;
-	border: 5px solid black;
-	border-radius: 1em;
-	margin-top: 1em;
-	padding: 1em;
+	border: 3px solid black;
+	border-radius: 2px;
+	margin-top: 5px;
+	padding: 5px;
 	-moz-box-shadow: -1px 3px 12px #000000;
 	-webkit-box-shadow: -1px 3px 12px #000000;
 	box-shadow: -1px 3px 12px #000000;
@@ -16,17 +16,17 @@
 
 .post .body {
 	background-color: lightgrey;
-	border-radius: 1em;
-	boder: 1px solid magenta;
+	border-radius: 2px;
+	border: 1px solid gray;
 }
 
 .post .comments {
-	background-color: lightpink;
+	background-color: white;
 }
 
 
 .post .new_comment {
-	background-color: cyan;
+	background-color: white;
 }
 
 /*

@@ -65,7 +65,26 @@ end
 
 get '/users/:id' do 
 	@user = User.find(params[:id].to_i)
+  @userposts = Post.find_by_user_id(params[:id].to_i)
 	erb :show
+end
+
+get '/posts/:id/editpost' do
+  @post = Post.find(params[:id].to_i)
+  erb :editpost
+end
+
+post '/posts/:id/editpost' do
+  post = Post.find(params[:id].to_i)
+  post.title = params[:title]
+  post.body = params[:body]
+  redirect '/'
+end
+
+get '/posts/:id/deletepost' do
+  post = Post.find(params[:id].to_i)
+  post.destroy
+  redirect '/'
 end
 
 post '/posts/:id/comments' do 
@@ -94,22 +113,4 @@ get '/posts/:id/like' do
 	redirect '/'
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
