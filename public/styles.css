@@ -1,6 +1,13 @@
+body {
+	background:url(http://pokerknave.com/files/2012/09/Geek-Hacking.jpg);
+	background-size: 100%;
+}
+
 .container {
+	background: white;
 	width: 600px;
 	margin: 0 auto;
+	padding: 10px;
 }
 .header {
 	background-color: darkblue;
@@ -18,7 +25,7 @@ input[type=submit], button {
 }
 
 .post {
-	background-color: lightblue;
+	background-color: #98AFC7;
 	border: 3px solid black;
 	border-radius: 5px;
 	margin-top: 5px;
