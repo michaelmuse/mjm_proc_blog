@@ -1,12 +1,26 @@
-.container{
+.container {
 	width: 600px;
 	margin: 0 auto;
+}
+.header {
+	background-color: darkblue;
+	color: white;
+	padding: 10px;
+}
+input[type=submit], button {
+	background-color: darkblue;
+	color: white;
+}
+
+
+.header a {
+	color: lightgrey;
 }
 
 .post {
 	background-color: lightblue;
 	border: 3px solid black;
-	border-radius: 2px;
+	border-radius: 5px;
 	margin-top: 5px;
 	padding: 5px;
 	-moz-box-shadow: -1px 3px 12px #000000;
@@ -16,17 +30,27 @@
 
 .post .body {
 	background-color: lightgrey;
-	border-radius: 2px;
+	border-radius: 3px;
 	border: 1px solid gray;
+	padding: 4px;
+	margin: 3px;
 }
 
 .post .comments {
 	background-color: white;
+	border-radius: 3px;
+	padding: 2px;
+	margin: 15px;
 }
 
 
 .post .new_comment {
 	background-color: white;
+	margin: 15px;
+}
+
+h1 {
+	font-family: helvetica;
 }
 
 /*

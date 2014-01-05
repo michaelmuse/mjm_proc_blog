@@ -65,7 +65,7 @@ end
 
 get '/users/:id' do 
 	@user = User.find(params[:id].to_i)
-  @userposts = Post.find_by_user_id(params[:id].to_i)
+  @userposts = Post.find_all_by_user_id(params[:id].to_i)
 	erb :show
 end
 
@@ -78,6 +78,7 @@ post '/posts/:id/editpost' do
   post = Post.find(params[:id].to_i)
   post.title = params[:title]
   post.body = params[:body]
+  post.save
   redirect '/'
 end
 
@@ -97,9 +98,7 @@ post '/posts/:id/comments' do
 	redirect '/'
 end 
 
-get '/posts/:id/like' do 
-	binding.pry
-	
+get '/posts/:id/like' do 	
 	user = User.find_by_username(session[:username])
 	post = Post.find(params[:id].to_i)
 
