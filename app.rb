@@ -16,7 +16,7 @@ get '/' do
 		@user = nil
 	end
 
-	@posts = Post.all
+	@posts = Post.all.reverse
 
 	erb :index
 end
